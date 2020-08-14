@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/crnr"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/cardvieww"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        app:cardElevation="15dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/crnr3">
+            <LinearLayout
+                android:id="@+id/ltxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/expandableLayout">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/bus"
+                    android:id="@+id/busimage"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/busln"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="16dp"
+                    android:text=" Bus Ligne"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:paddingTop="13dp"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/dropp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expandableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/crnr"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/ltxt"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/crnr"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="15dp">
+
+                    <RelativeLayout
+
+                        style="@style/ok">
+
+                        <ImageView
+                            android:id="@+id/title_from_to_dots"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/from_to_purple" />
+
+                        <TextView
+                            android:id="@+id/dprt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/title_from_to_dots"
+                            android:layout_marginTop="-5dp"
+                            android:layout_toEndOf="@+id/title_from_to_dots"
+                            android:layout_toRightOf="@+id/title_from_to_dots"
+                            android:ellipsize="marquee"
+                            android:fadingEdge="horizontal"
+                            android:singleLine="true"
+                            android:text="Seniya "
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/title_from_to_dots_divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/dprt"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_toEndOf="@+id/title_from_to_dots"
+                            android:layout_toRightOf="@+id/title_from_to_dots"
+                            android:src="#00504084" />
+
+                        <TextView
+                            android:id="@+id/arv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title_from_to_dots_divider"
+                            android:layout_toEndOf="@id/title_from_to_dots"
+                            android:layout_toRightOf="@id/title_from_to_dots"
+                            android:ellipsize="marquee"
+                            android:fadingEdge="horizontal"
+                            android:singleLine="true"
+                            android:text="Valero "
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
